@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20181030170913_SP_Migration.cs" />
+    <Compile Remove="Migrations\20181030170913_SP_Migration.Designer.cs" />
+    <Compile Remove="Migrations\20181030175356_terceraMigration.cs" />
+    <Compile Remove="Migrations\20181030175356_terceraMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181030175555_terceraMigration.cs" />
+    <Compile Remove="Migrations\20181030175555_terceraMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181030175806_terceraMigration.cs" />
+    <Compile Remove="Migrations\20181030175806_terceraMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181030175955_terceraMigration.cs" />
+    <Compile Remove="Migrations\20181030175955_terceraMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181030180027_terceraMigration.cs" />
+    <Compile Remove="Migrations\20181030180027_terceraMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181030180134_terceraMigration.cs" />
+    <Compile Remove="Migrations\20181030180134_terceraMigration.Designer.cs" />
+    <Compile Remove="Migrations\20181030180401_MigrationTercera.cs" />
+    <Compile Remove="Migrations\20181030180401_MigrationTercera.Designer.cs" />
+    <Compile Remove="Migrations\20181031004501_EstadoHabitacion2.cs" />
+    <Compile Remove="Migrations\20181031004501_EstadoHabitacion2.Designer.cs" />
+    <Compile Remove="Migrations\20181031162441_Estado.cs" />
+    <Compile Remove="Migrations\20181031162441_Estado.Designer.cs" />
+    <Compile Remove="Migrations\20181031163903_EstadoHabitacion.cs" />
+    <Compile Remove="Migrations\20181031163903_EstadoHabitacion.Designer.cs" />
+    <Compile Remove="Migrations\20181031171309_EstadoHabitacion.cs" />
+    <Compile Remove="Migrations\20181031171309_EstadoHabitacion.Designer.cs" />
+    <Compile Remove="Migrations\20181031171815_EstadoHabitacion.cs" />
+    <Compile Remove="Migrations\20181031171815_EstadoHabitacion.Designer.cs" />
+    <Compile Remove="Migrations\20181031172827_EstadoHabitacion.cs" />
+    <Compile Remove="Migrations\20181031172827_EstadoHabitacion.Designer.cs" />
+    <Compile Remove="Migrations\20181031181350_Hbitacion.cs" />
+    <Compile Remove="Migrations\20181031181350_Hbitacion.Designer.cs" />
+    <Compile Remove="Migrations\20181031183833_Estado.cs" />
+    <Compile Remove="Migrations\20181031183833_Estado.Designer.cs" />
+    <Compile Remove="Migrations\20181031212816_Estado.cs" />
+    <Compile Remove="Migrations\20181031212816_Estado.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.6" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+</Project>
