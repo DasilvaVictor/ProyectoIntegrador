@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApiHotel.Data;
 using WebApiHotel.Models;
 
 namespace WebApiHotel.Controllers
@@ -23,9 +22,9 @@ namespace WebApiHotel.Controllers
 
         // GET: api/Habitaciones
         [HttpGet]
-        public IEnumerable<Habitacion> GetHabitaciones()
+        public IEnumerable<Habitaciones> GetHabitaciones()
         {
-            return _context.Habitaciones.Include(x=>x.Estado).Include(y=>y.Tipo);
+            return _context.Habitaciones.Include(x=>x.EstadoHabitaciones).Include(y=>y.TipoHabitaciones);
         }
 
         // GET: api/Habitaciones/5
@@ -36,9 +35,9 @@ namespace WebApiHotel.Controllers
             {
                 return BadRequest(ModelState);
             }
-            Habitacion habitacion;
+            Habitaciones habitacion;
            
-             habitacion = await _context.Habitaciones.Include(x=>x.Estado).Include(y=>y.Tipo).SingleOrDefaultAsync(m => m.Codigo == id);
+             habitacion = await _context.Habitaciones.Include(x=>x.EstadoHabitaciones).Include(y=>y.TipoHabitaciones).SingleOrDefaultAsync(m => m.Codigo == id);
            
             if (habitacion == null)
             {
@@ -51,7 +50,7 @@ namespace WebApiHotel.Controllers
 
         // PUT: api/Habitaciones/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutHabitacion([FromRoute] int id, [FromBody] Habitacion habitacion)
+        public async Task<IActionResult> PutHabitacion([FromRoute] int id, [FromBody] Habitaciones habitacion)
         {
             if (!ModelState.IsValid)
             {
@@ -68,8 +67,7 @@ namespace WebApiHotel.Controllers
 
             try
             {
-                //_context.UpdateRange(habitacion.Estado);
-                //_context.UpdateRange(habitacion.Tipo);
+           
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -89,7 +87,7 @@ namespace WebApiHotel.Controllers
 
         // POST: api/Habitaciones
         [HttpPost]
-        public async Task<IActionResult> PostHabitacion([FromBody] Habitacion habitacion)
+        public async Task<IActionResult> PostHabitacion([FromBody] Habitaciones habitacion)
         {
             if (!ModelState.IsValid)
             {

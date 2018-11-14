@@ -13356,11 +13356,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor\\source\\repos\\WebApiHotel_solucion\\WebApiHotel\\WebApiHotel.csproj",
+      "projectUniqueName": "C:\\Users\\Victor\\Documents\\GitHub\\ProyectoIntegrador\\WebApiHotel_solucion\\WebApiHotel\\WebApiHotel.csproj",
       "projectName": "WebApiHotel",
-      "projectPath": "C:\\Users\\Victor\\source\\repos\\WebApiHotel_solucion\\WebApiHotel\\WebApiHotel.csproj",
+      "projectPath": "C:\\Users\\Victor\\Documents\\GitHub\\ProyectoIntegrador\\WebApiHotel_solucion\\WebApiHotel\\WebApiHotel.csproj",
       "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor\\source\\repos\\WebApiHotel_solucion\\WebApiHotel\\obj\\",
+      "outputPath": "C:\\Users\\Victor\\Documents\\GitHub\\ProyectoIntegrador\\WebApiHotel_solucion\\WebApiHotel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

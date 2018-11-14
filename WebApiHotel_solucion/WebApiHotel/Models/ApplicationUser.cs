@@ -8,5 +8,6 @@ namespace WebApiHotel.Models
 {
     public class ApplicationUser:IdentityUser
     {
+        public int DNI { get; set; }
     }
 }

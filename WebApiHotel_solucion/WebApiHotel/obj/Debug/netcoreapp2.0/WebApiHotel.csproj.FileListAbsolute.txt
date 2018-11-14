@@ -9,3 +9,14 @@ C:\Users\Victor\source\repos\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcorea
 C:\Users\Victor\source\repos\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.dll
 C:\Users\Victor\source\repos\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.pdb
 C:\Users\Victor\source\repos\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.csprojAssemblyReference.cache
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\bin\Debug\netcoreapp2.0\WebApiHotel.deps.json
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\bin\Debug\netcoreapp2.0\WebApiHotel.runtimeconfig.json
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\bin\Debug\netcoreapp2.0\WebApiHotel.runtimeconfig.dev.json
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\bin\Debug\netcoreapp2.0\WebApiHotel.dll
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\bin\Debug\netcoreapp2.0\WebApiHotel.pdb
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.csproj.CoreCompileInputs.cache
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.AssemblyInfoInputs.cache
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.AssemblyInfo.cs
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.dll
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.pdb
+C:\Users\Victor\Documents\GitHub\ProyectoIntegrador\WebApiHotel_solucion\WebApiHotel\obj\Debug\netcoreapp2.0\WebApiHotel.csprojAssemblyReference.cache

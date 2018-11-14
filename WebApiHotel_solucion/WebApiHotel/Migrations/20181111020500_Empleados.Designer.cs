@@ -11,8 +11,8 @@ using WebApiHotel.Models;
 namespace WebApiHotel.Migrations
 {
     [DbContext(typeof(WebApiHotelDBContext))]
-    [Migration("20181103191210_Estado_Tipo")]
-    partial class Estado_Tipo
+    [Migration("20181111020500_Empleados")]
+    partial class Empleados
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -129,18 +129,6 @@ namespace WebApiHotel.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("WebApiHotel.Data.Estado", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Estado_Habitacion");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Estado");
-                });
-
             modelBuilder.Entity("WebApiHotel.Data.Habitacion", b =>
                 {
                     b.Property<int>("Codigo")
@@ -148,21 +136,13 @@ namespace WebApiHotel.Migrations
 
                     b.Property<string>("Detalle");
 
-                    b.Property<int?>("EstadoId");
-
                     b.Property<string>("Numero");
 
                     b.Property<double>("Precio");
 
-                    b.Property<int?>("TipoId");
-
                     b.HasKey("Codigo");
 
-                    b.HasIndex("EstadoId");
-
-                    b.HasIndex("TipoId");
-
-                    b.ToTable("Habitacion");
+                    b.ToTable("Habitaciones");
                 });
 
             modelBuilder.Entity("WebApiHotel.Models.ApplicationUser", b =>
@@ -216,16 +196,63 @@ namespace WebApiHotel.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("WebApiHotel.Models.Empleado", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Apellido");
+
+                    b.Property<int>("DNI");
+
+                    b.Property<string>("Direccion");
+
+                    b.Property<DateTime>("FechaNacimiento");
+
+                    b.Property<string>("Nombre");
+
+                    b.Property<int>("Telefono");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DNI")
+                        .IsUnique();
+
+                    b.ToTable("Empleados");
+                });
+
+            modelBuilder.Entity("WebApiHotel.Models.Estado", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("EstadoHabitacion");
+
+                    b.Property<int>("HabitacionId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HabitacionId")
+                        .IsUnique();
+
+                    b.ToTable("EstadoHabitaciones");
+                });
+
             modelBuilder.Entity("WebApiHotel.Models.Tipo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Tipo_Habitacion");
+                    b.Property<int>("HabitacionId");
+
+                    b.Property<string>("TipoHabitacion");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tipo");
+                    b.HasIndex("HabitacionId")
+                        .IsUnique();
+
+                    b.ToTable("TipoHabitaciones");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -273,15 +300,20 @@ namespace WebApiHotel.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("WebApiHotel.Data.Habitacion", b =>
+            modelBuilder.Entity("WebApiHotel.Models.Estado", b =>
                 {
-                    b.HasOne("WebApiHotel.Data.Estado", "Estado")
-                        .WithMany()
-                        .HasForeignKey("EstadoId");
+                    b.HasOne("WebApiHotel.Data.Habitacion")
+                        .WithOne("Estado")
+                        .HasForeignKey("WebApiHotel.Models.Estado", "HabitacionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
 
-                    b.HasOne("WebApiHotel.Models.Tipo", "Tipo")
-                        .WithMany()
-                        .HasForeignKey("TipoId");
+            modelBuilder.Entity("WebApiHotel.Models.Tipo", b =>
+                {
+                    b.HasOne("WebApiHotel.Data.Habitacion")
+                        .WithOne("Tipo")
+                        .HasForeignKey("WebApiHotel.Models.Tipo", "HabitacionId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

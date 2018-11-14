@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using WebApiHotel.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiHotel
 {
@@ -49,6 +49,13 @@ namespace WebApiHotel
             });
             services.AddDbContext<WebApiHotelDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebApiHotelContext")));
+            services.AddMvc().AddJsonOptions(ConfigurandoJson);
+
+          
+        }
+        private void ConfigurandoJson(MvcJsonOptions obj)
+        {
+            obj.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

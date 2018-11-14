@@ -39,10 +39,13 @@
     <Compile Remove="Migrations\20181031183833_Estado.Designer.cs" />
     <Compile Remove="Migrations\20181031212816_Estado.cs" />
     <Compile Remove="Migrations\20181031212816_Estado.Designer.cs" />
+    <Compile Remove="Migrations\20181111020259_Empleados.cs" />
+    <Compile Remove="Migrations\20181111020259_Empleados.Designer.cs" />
+    <Compile Remove="Migrations\20181111170909_EmpleadoCuenta.cs" />
+    <Compile Remove="Migrations\20181111170909_EmpleadoCuenta.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
