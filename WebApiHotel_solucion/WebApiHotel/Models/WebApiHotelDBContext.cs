@@ -5,13 +5,14 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WebApiHotel.Models
 {
-    public partial class WebApiHotelDBContext : IdentityDbContext
+    public partial class WebApiHotelDBContext : IdentityDbContext<ApplicationUser>
     {
        
         public virtual DbSet<Empleados> Empleados { get; set; }
         public virtual DbSet<EstadoHabitaciones> EstadoHabitaciones { get; set; }
         public virtual DbSet<Habitaciones> Habitaciones { get; set; }
         public virtual DbSet<TipoHabitaciones> TipoHabitaciones { get; set; }
+        
 
         public WebApiHotelDBContext(DbContextOptions<WebApiHotelDBContext> options) : base(options)
         {

@@ -45,6 +45,8 @@
     <Compile Remove="Migrations\20181111170909_EmpleadoCuenta.Designer.cs" />
     <Compile Remove="Migrations\20181111230323_EmpleadoCargo.cs" />
     <Compile Remove="Migrations\20181111230323_EmpleadoCargo.Designer.cs" />
+    <Compile Remove="Migrations\20181115041223_AplicationUser.cs" />
+    <Compile Remove="Migrations\20181115041223_AplicationUser.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
