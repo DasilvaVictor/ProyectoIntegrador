@@ -43,6 +43,8 @@
     <Compile Remove="Migrations\20181111020259_Empleados.Designer.cs" />
     <Compile Remove="Migrations\20181111170909_EmpleadoCuenta.cs" />
     <Compile Remove="Migrations\20181111170909_EmpleadoCuenta.Designer.cs" />
+    <Compile Remove="Migrations\20181111230323_EmpleadoCargo.cs" />
+    <Compile Remove="Migrations\20181111230323_EmpleadoCargo.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

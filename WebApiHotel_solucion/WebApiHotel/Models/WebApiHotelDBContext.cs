@@ -1,18 +1,13 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WebApiHotel.Models
 {
-    public partial class WebApiHotelDBContext : DbContext
+    public partial class WebApiHotelDBContext : IdentityDbContext
     {
-        public virtual DbSet<AspNetRoleClaims> AspNetRoleClaims { get; set; }
-        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUserRoles> AspNetUserRoles { get; set; }
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
-        public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
+       
         public virtual DbSet<Empleados> Empleados { get; set; }
         public virtual DbSet<EstadoHabitaciones> EstadoHabitaciones { get; set; }
         public virtual DbSet<Habitaciones> Habitaciones { get; set; }
@@ -22,18 +17,19 @@ namespace WebApiHotel.Models
         {
 
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+     /*   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=WebApiHotelDB;Integrated Security=False;User ID=sa;Password=sql;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;");
             }
-        }
+        }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<AspNetRoleClaims>(entity =>
+            base.OnModelCreating(modelBuilder);
+           /* modelBuilder.Entity<AspNetRoleClaims>(entity =>
             {
                 entity.HasIndex(e => e.RoleId);
 
@@ -162,7 +158,7 @@ namespace WebApiHotel.Models
                 entity.HasOne(d => d.Habitacion)
                     .WithOne(p => p.TipoHabitaciones)
                     .HasForeignKey<TipoHabitaciones>(d => d.HabitacionId);
-            });
+            });*/
         }
     }
 }
